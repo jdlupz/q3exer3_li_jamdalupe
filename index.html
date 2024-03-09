@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+
+    <p id="number"></p>
+    <br>
+    <p id="brdown"></p>
+    <br>
+    <p id="date"></p>
+
+<script>
+    var ranNum = Math.floor(Math.random() * 1001);
+    
+    document.getElementById("number").innerHTML = "Randomly generated number: " + Math.floor(ranNum);
+    
+    var ones = Math.floor(ranNum%10);
+    var tens = Math.floor((ranNum%100)/10);
+    var hundreds = Math.floor(ranNum/100);
+
+    document.getElementById("brdown").innerHTML = "Breakdown: " + (hundreds*100) + ", " + (tens*10) + ", " + ones;
+
+    document.getElementById("date").innerHTML = "Date: " + new Date();
+</script>
+
+</body>
+</html>
